@@ -117,9 +117,9 @@ Only now should you start worrying about what the device should look like. Devel
 
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
-**Include sketches of what your device might look like here.**
+![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/prototype.jpg)
 
-**It should be able to be carried with the user, and therefore it should be portable and light in weight. It should be able to work with most sizes of the cups and therefore it should not be too small. It works with the cups, so it needs to be water-proof. **
+**It should be able to be carried with the user, and therefore it should be portable and light in weight. It should be able to work with most sizes of the cups and therefore it should not be too small. It works with the cups, so it needs to be water-proof.**
 
 
 ## Part F. Record
