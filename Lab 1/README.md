@@ -124,7 +124,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 ## Part F. Record
 
-[This is the link to the improved setup](https://drive.google.com/file/d/1t3wJFWo09HcAyW7GTecJHk08pYMMbCiB/view?usp=sharing)
+[This is the link to the demo](https://drive.google.com/file/d/1t3wJFWo09HcAyW7GTecJHk08pYMMbCiB/view?usp=sharing)
 
 **Qianzhi Xu helped me with recording the video by helping with controlling the light remotely.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
