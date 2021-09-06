@@ -76,14 +76,14 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 
-**They think that overall it is a great idea. However, one issue is that the person may not carry the mat with the person wherever he goes. However, using a cup mat allows the person to measure the water intake with different cups. **
+**They think that overall it is a great idea. However, one issue is that the person may not carry the mat with the person wherever he goes. However, using a cup mat allows the person to measure the water intake with different cups.**
 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-**Most of the things worked out fine, but one drawback is that the user needs to always remember to put the cup back on the mat. Besides, when the user changes this cup of water to another cup of water, she needs to reset the mat so that the mat won't count the water has already consumed by the user. **
+**Most of the things worked out fine, but one drawback is that the user needs to always remember to put the cup back on the mat. Besides, when the user changes this cup of water to another cup of water, she needs to reset the mat so that the mat won't count the water has already consumed by the user.**
 
 **Based on this discovery, I am going to add a button to the cup mat that allows it to reset the weight of the water and discard the previous weight instead of counting the weight as already drunk.**
 
