@@ -108,7 +108,7 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
-**Show the follow-up work here.**
+[This is the link to the improved setup](https://drive.google.com/file/d/1TAGEkVNQqAJLUtATZWtWnf8xIfBNhLXD/view?usp=sharing)
 
 
 ## Part E. Costume the device
@@ -124,7 +124,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 ## Part F. Record
 
-\*\***Take a video of your prototyped interaction.**\*\*
+[This is the link to the improved setup](https://drive.google.com/file/d/1t3wJFWo09HcAyW7GTecJHk08pYMMbCiB/view?usp=sharing)
 
 **Qianzhi Xu helped me with recording the video by helping with controlling the light remotely.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
