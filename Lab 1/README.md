@@ -68,7 +68,12 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
-**The interactive device that I want to build is a smart cup mat that reminds the user to drink water by showing different light signals. It works in the way that it tracks the user's water intake by tracking the weight change of the cup. When it is time for the user to drink water, it gleams to notify the user. The user can click a button to postpone the reminder, yet if it takes too long before the user to drink water, the color is going to change from green to red.**
+**Setting: The interaction happens when the person drinks water in an indoor environment. It can be anytime anywhere but especially when the user needs to work and concentrate for a long time.**
+**Players: Only the user is involved in the situation. However, there should not be anyone to press the buttons randomly. **
+
+**Activity: The user puts a cup of water on the smart cup mat. Then the cup mat tracks the user's water intake by tracking the weight change of the cup. When it is time for the user to drink water, it gleams to notify the user. The user can click a button to postpone the reminder, yet if it takes too long before the user to drink water, the color is going to change from green to red.**
+
+**Goals: The goal of the user is to concentrate on work while remain hydrated. The goal of the smart cup mat is to remind the user to drink water**
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
@@ -83,7 +88,9 @@ Present your idea to the other people in your breakout room. You can just get fe
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-**Most of the things worked out fine, but one drawback is that the user needs to always remember to put the cup back on the mat. Besides, when the user changes this cup of water to another cup of water, she needs to reset the mat so that the mat won't count the water has already consumed by the user.**
+**I think the idea of smart cup is great. It seems can help people develop a good habit of drinking water on time. Also there is a button to snooze the light in case the user cannot drink water for some reasons. And the color changing from yellow to red indicates the urgency degree, which is intuitive. My only concern is that wether the mat can be designed to be portable enough. Since people may want to use it at many places. -- Tianyun Zou (tz392)**
+
+**The “smart water bottle” design is a great way to systematically remind and encourage user to stay hydrated, and it allows user to focus on what they are doing by having to worry less. One nice part about the design is the (potential) ease of implementation using simple combination of digital scale and LED light. One potential problem, though, is that, depending on user preference, it may actually increase the level of distraction if the user prefers extreme focus. The snooze button sees this problem and partially addresses it, and perhaps the ability to switch the alert light on and off will be even nicer. -- Qianzhi Xu**
 
 **Based on this discovery, I am going to add a button to the cup mat that allows it to reset the weight of the water and discard the previous weight instead of counting the weight as already drunk.**
 
@@ -127,6 +134,7 @@ Think about the setting of the device: is the environment a place where the devi
 [This is the link to the demo](https://drive.google.com/file/d/1t3wJFWo09HcAyW7GTecJHk08pYMMbCiB/view?usp=sharing)
 
 **Qianzhi Xu helped me with recording the video by helping with controlling the light remotely.**
+**Qianzhi Xu and Tianyun Zou helped me to give feedback to my design**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 
