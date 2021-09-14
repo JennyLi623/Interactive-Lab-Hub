@@ -172,7 +172,7 @@ Do last week’s assignment again, but this time:
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
-![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/storyboard.jpg)
+![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/storyboard2.jpg)
 
 ## Part B. Act out the Interaction
 
@@ -194,7 +194,7 @@ Only now should you start worrying about what the device should look like. Devel
 
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
-![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/prototype.jpg)
+![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/prototype2.jpg)
 
 **It should be able to be carried with the user, and therefore it should be portable and light in weight. It should be able to work with most sizes of the cups and therefore it should not be too small. It works with the cups, so it needs to be water-proof. It should contain a interface that allows user to set timer that they want to remind the user to drink water.**
 
