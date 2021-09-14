@@ -1,9 +1,4 @@
 
-
-https://user-images.githubusercontent.com/89815599/133190380-59cae6ce-fffe-47ed-abcd-5f79aae15632.mp4
-
-
-
 # Staging Interaction
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
@@ -191,6 +186,7 @@ Try physically acting out the interaction you planned. For now, you can just pre
 ## Part D. Wizard the device
 
 **This is the improved setup, I added the timer function**
+
 https://user-images.githubusercontent.com/89815599/133190426-63111d99-5ce4-46cf-a2b5-d59a5a1e5813.mp4
 
 
