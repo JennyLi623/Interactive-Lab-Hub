@@ -159,3 +159,53 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+## Part A. Plan 
+
+**Setting: The interaction happens when the person drinks water in an indoor environment. It can be anytime anywhere but especially when the user needs to work and concentrate for a long time.**
+**Players: Only the user is involved in the situation. However, there should not be anyone to press the buttons randomly. **
+
+**Activity: The user puts a cup of water on the smart cup mat. Then the cup mat tracks the user's water intake by tracking the weight change of the cup. When it is time for the user to drink water, it gleams to notify the user. The user can click a button to postpone the reminder, yet if it takes too long before the user to drink water, the color is going to change from green to red.**
+
+***Improvement in Activity: The user can set reminder timer by adjusting the bar on the side of the cup mat that indicates the time to remind the user to drink water after the user uses "SNOOZE" to pause the cup mat from reminding.***
+
+**Goals: The goal of the user is to concentrate on work while remain hydrated. The goal of the smart cup mat is to remind the user to drink water.**
+
+Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
+
+![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/storyboard.jpg)
+
+## Part B. Act out the Interaction
+
+Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
+
+**Currently I think the interaction worked quite well, it is just the design may be improved so that it looks nicer.**
+
+
+## Part C. Prototype the device
+**Already set up in Part I**
+
+## Part D. Wizard the device
+
+[This is the link to the improved setup](https://drive.google.com/file/d/1TAGEkVNQqAJLUtATZWtWnf8xIfBNhLXD/view?usp=sharing)
+
+## Part E. Costume the device
+
+Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
+
+Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+
+![alt text](https://github.com/JennyLi623/Interactive-Lab-Hub/blob/Fall2021/prototype.jpg)
+
+**It should be able to be carried with the user, and therefore it should be portable and light in weight. It should be able to work with most sizes of the cups and therefore it should not be too small. It works with the cups, so it needs to be water-proof. It should contain a interface that allows user to set timer that they want to remind the user to drink water.**
+
+
+## Part F. Record
+
+**There are two updated functions of the design
+1)The side bar to adjust the remind timer
+2)The reset button that allows the user to change a cup of water without letting the system count the water as drank by the user.
+
+[This is the link to the demo](https://drive.google.com/file/d/1t3wJFWo09HcAyW7GTecJHk08pYMMbCiB/view?usp=sharing)
+
+**Qianzhi Xu helped me with recording the video by helping with controlling the light remotely.**
+Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
