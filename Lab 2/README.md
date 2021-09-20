@@ -197,8 +197,15 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+
+
+https://user-images.githubusercontent.com/89815599/134083648-12a06c71-7fa9-4b74-88fd-557a82fbb24c.mp4
+
+
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+I want to add more function to it. For example, it can remind me to study and to rest, and it can show to do list and I can detect them after I finish them.
 
 
 # Prep for Part 2
