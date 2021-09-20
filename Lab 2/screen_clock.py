@@ -1,4 +1,6 @@
 import time
+from time import strftime, sleep
+import random
 import subprocess
 import digitalio
 import board
@@ -60,12 +62,40 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+size = 18
+inc = True
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    display_time = 0.1
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    if size == 24:
+        inc = False
+    elif size == 18:
+        inc = True
+    if inc == True:
+        size += 1
+    else:
+        size -= 1
+    quotefont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
+    timefont = ImageFont.truetype("usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", size)
+    y = top + 20
+    quotes = ["Believe in yourself", "work hard", "Be a dreamer", "Take action", "Set big goals"]
+    colors = ["#f4b6c2", "#0336cc", "#fe8a71", "#fad9c1", "#ff0000"]
+    display = strftime("%m/%d/%y %H:%M:%S")
 
+    if buttonA.value and buttonB.value:
+        draw.text((x, y), display, font=timefont, fill="#00FF00")
+    else:
+        draw.text((x, y), random.choice(quotes), font=quotefont, fill=random.choice(colors))
+        display_time = 3
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(display_time)
+    
