@@ -3,9 +3,16 @@ from time import strftime, sleep
 import random
 import subprocess
 import digitalio
+import busio
+import adafruit_apds9960.apds9960
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+
+i2c = busio.I2C(board.SCL, board.SDA)
+phone_sensor = adafruit_apds9960.apds9960.APDS9960(i2c)
+
+phone_sensor.enable_proximity = True
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -69,9 +76,33 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 size = 18
 inc = True
+phone_on_sensor = False
+phone_hint_1 = "Put Your Phone"
+phone_hint_2 = "DDDOOOWWWNNN"
+study_mode = False
+study = False
+timer = 0
+
 while True:
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    if timer == 0:
+        study = not study
+        if study:
+            timer = 250
+        else:
+            timer = 50
+    if study_mode:
+        if study and phone_on_sensor:
+            timer -= 1
+            draw.rectangle((0, 0, width, height), outline = 0, fill = "#FF0000")
+        elif not study:
+            draw.rectangle((0, 0, width, height), outline = 0, fill = "#0000FF")
+            timer -= 1
+        else:
+            draw.rectangle((0, 0, width, height), outline=0, fill = "#FF0000")
+            draw.rectangle((10, 10, width - 10, height - 10), outline=0, fill = "#000000")
+    else:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
     display_time = 0.1
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
@@ -88,10 +119,31 @@ while True:
     y = top + 20
     quotes = ["Believe in yourself", "work hard", "Be a dreamer", "Take action", "Set big goals"]
     colors = ["#f4b6c2", "#0336cc", "#fe8a71", "#fad9c1", "#ff0000"]
+    time_left = "Time Left: " + str(int(timer / 10)) + "min"
     display = strftime("%m/%d/%y %H:%M:%S")
+    if phone_sensor.proximity != 0:
+        phone_on_sensor = True
+        phone_hint_1 = "Keep on the good work"
+    else:
+        phone_on_sensor = False
+        phone_hint_1 = "Put Your Phone"
+
 
     if buttonA.value and buttonB.value:
-        draw.text((x, y), display, font=timefont, fill="#00FF00")
+        if study_mode and phone_on_sensor:
+            draw.text((x, y), time_left, font = quotefont, fill = "#000000")
+        elif study_mode and study and not phone_on_sensor:
+            draw.text((x + 20, y), phone_hint_1, font = quotefont, fill = "#FF0000")
+            y += 30
+            draw.text((x + 20, y), phone_hint_2, font = quotefont, fill = "#FF0000")
+        else:
+           draw.text((x, y), display, font=timefont, fill="#00FF00")
+           y = top + 40
+    elif buttonB.value and not buttonA.value:
+        study_mode = not study_mode
+        if study_mode:
+            study = False
+            timer = 0
     else:
         draw.text((x, y), random.choice(quotes), font=quotefont, fill=random.choice(colors))
         display_time = 3
