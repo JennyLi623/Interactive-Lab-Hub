@@ -95,8 +95,10 @@ while True:
         if study and phone_on_sensor:
             timer -= 1
             draw.rectangle((0, 0, width, height), outline = 0, fill = "#FF0000")
+            draw.rectangle((0, 0, int(width - width * timer / 250), height), outline = 0, fill = "#00FF00")
         elif not study:
             draw.rectangle((0, 0, width, height), outline = 0, fill = "#0000FF")
+            draw.rectangle((0, 0, int(width - width * timer / 50), height), outline = 0, fill = "#FF0000")
             timer -= 1
         else:
             draw.rectangle((0, 0, width, height), outline=0, fill = "#FF0000")
@@ -136,6 +138,8 @@ while True:
             draw.text((x + 20, y), phone_hint_1, font = quotefont, fill = "#FF0000")
             y += 30
             draw.text((x + 20, y), phone_hint_2, font = quotefont, fill = "#FF0000")
+        elif study_mode and not study:
+           draw.text((x, y), time_left, font = quotefont, fill = "#000000") 
         else:
            draw.text((x, y), display, font=timefont, fill="#00FF00")
            y = top + 40
@@ -145,6 +149,7 @@ while True:
             study = False
             timer = 0
     else:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         draw.text((x, y), random.choice(quotes), font=quotefont, fill=random.choice(colors))
         display_time = 3
     # Display image.
