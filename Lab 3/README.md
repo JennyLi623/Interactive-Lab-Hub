@@ -108,11 +108,44 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 
 \*\***Please describe and document your process.**\*\*
 
+MACHINE: Hello, I am the Auto milktea machine.Please insert your card to begin!
+
+USER:    (Insert card)
+
+MACHINE: Received! Now please select the milktea you want by telling me the number at the bottom of the machine.
+
+USER: Three!
+
+MACHINE: Got it! You selected strawberry milktea. To change to another one, say "0". Otherwise, choose your level of sweetness by telling me the number to continue.
+
+USER: Two! 
+
+MACHINE: 25% sweetness! Now, choose your level of ice by telling me the number to continue.
+
+USER: One!
+
+MACHINE: No ice! Now, choose your Add-ons by telling me the number to continue.
+
+USER: One, two, four!
+
+MACHINE: Boba, pudding, and cream foam. Here is a summary of your orders: You ordered one strawberry milktea with 25% sweetness, no ice and with boba, pudding and cream foam as add-ons. Please confirm to complete the order by saying 1.
+
+USER: One!
+
+MACHINE: Milketea preparing ~ ~ ~
+
+MACHINE: Your milktea is ready! Thank you for your visit!
+
+***Basically, I write out the options in cards and write out the senteces the machine asks in a google doc and went through this a couple of times to modify the phrases and complete the function.***
+
+
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+
+***When acted out, the situation is more complicated then I once thought. The user may regret a choice after she made other choices and may even say that "Ehh, actually I want to change to oringinal milktea and keep all other options as they are" only before checkout which there is no way my current machine can finish that***
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
