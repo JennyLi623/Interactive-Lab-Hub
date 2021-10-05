@@ -143,9 +143,10 @@ MACHINE: Your milktea is ready! Thank you for your visit!
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
+[There is the video](https://drive.google.com/file/d/1OszYqWfqp6g3oKaHQeZuTTMdpWnzeOeE/view?usp=sharing)
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
-***When acted out, the situation is more complicated then I once thought. The user may regret a choice after she made other choices and may even say that "Ehh, actually I want to change to oringinal milktea and keep all other options as they are" only before checkout which there is no way my current machine can finish that***
+***When acted out, the situation is more complicated then I once thought. As you can see in the video, the user does not only say the number but also say words like "I guess" or . The user may regret a choice after she made other choices and may even say that "Ehh, actually I want to change to oringinal milktea and keep all other options as they are" only before checkout which there is no way my current machine can finish that.***
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
