@@ -163,6 +163,8 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
+**My storyboard stay basically the same, but I coded the all actual system and I also changed the design from a menu listed statically on the machine to the one the dynamically changes in a digital screen.**
+
 ## Prototype your system
 
 The system should:
@@ -171,27 +173,27 @@ The system should:
 * require participants to speak to it. 
 
 *Document how the system works*
+The system begins by asking the participants to swipe the card and then 
 
 *Include videos or screencaptures of both the system and the controller.*
-
+[There is the video](https://drive.google.com/file/d/1e47dO8RWqCb9q1hD3lJzXgsYXTEFsv74/view?usp=sharing)
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+The system worked well in general. I added the phrase so that it requires the user to say the numbers as input and that really helps with the accuracy. Although the users still need to wait a little bit to say the number so that the system gets it.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+I actually did not use the controller but coded the whole system so that it gives different response based on users' different choices.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+I think the lesson is that I need to consider more conditions of the system and improve the acurracy of the system. Giving users more choices such as allowing them to change their option whenever is also important but it is a problem that is hard to resolve.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+I think that there are still limits on this device because it only allows voice control. However, if there is a system that you can select whether you want voice controll or touch screen control it can be more convenient.
 
