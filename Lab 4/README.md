@@ -175,10 +175,15 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![sketches of 5 uses of the proximity sensor](https://user-images.githubusercontent.com/89815599/137839181-b1877893-a55c-4db2-aea2-23fcbc57c80f.jpg)
+
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
-**\*\*\*Pick one of these designs to prototype.\*\*\***
+I think that the accuracy of the proximity sensor is in question, and how to calculate the results is also something to figure out. One example would be that for the earthquake detector, we need to figure out what is the expected change of value for the system to send alarm. We do not want the system to send the alarm if there is a small change of value due to the wind or people moving stuff. But we also do not want the system to miss even one earthquake that is serious.
 
+**\*\*\*Pick one of these designs to prototype.\*\*\***
+I want to pick the design for alzheimer's patients to prototype.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -219,14 +224,18 @@ Here is an example:
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+![design for alzheimer‘s patient](https://user-images.githubusercontent.com/89815599/137840556-4809c1d5-bad3-408f-95fc-c0995cb06d37.jpg)
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+How to best fit the patients' need that detecting if the patient wanders at night or tries to go out of door is very important. 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I will use the mat at the door as the one to be the prototyped. 
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-Build a cardbord prototype of your design.
+I think this design is the most convenient because there are times older people get up to use bathroom at night or wear a different pair of shoes to go out at night. The sensor at the door handle may also be useful but may be destroyed because they are too evident and the older people may think that they do not belong to that place because the sensor is not in their memory. Watches are good but older people may choose not to wear them.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
