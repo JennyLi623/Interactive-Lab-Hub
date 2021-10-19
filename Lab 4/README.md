@@ -238,7 +238,9 @@ I will use the mat at the door as the one to be the prototyped.
 I think this design is the most convenient because there are times older people get up to use bathroom at night or wear a different pair of shoes to go out at night. The sensor at the door handle may also be useful but may be destroyed because they are too evident and the older people may think that they do not belong to that place because the sensor is not in their memory. Watches are good but older people may choose not to wear them.
 
 **\*\*\*Document your rough prototype.\*\*\***
-
+![prototype 1](https://user-images.githubusercontent.com/89815599/137841666-a01f04e9-bc04-4cf0-802a-e6382793fd91.jpg)
+![prototype 2](https://user-images.githubusercontent.com/89815599/137841686-d78d7279-7de5-4efb-8ea1-57fbbc3b85f6.jpg)
+This picture shows how there is a sensor right beneath a door mat to detect if some one goes out of home. People can set the time range that they want the sensor and alarm to work. 
 
 LAB PART 2
 
