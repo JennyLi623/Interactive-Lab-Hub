@@ -291,7 +291,7 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 * "Works like": shows what the device can do
 
-![smart door mat concept](https://user-images.githubusercontent.com/89815599/138805310-9d5df574-293b-45ae-a923-c87b8d4f3d00.jpg)
+![smart door mat UI](https://user-images.githubusercontent.com/89815599/138805757-b7387d02-73a6-45e9-9b35-021c7b7ba6a5.png)
 
 **The mat should be connected to an app and can be controlld remotely. On the main page of the app, there should be a button that enables the device and turn of the alarm because those two are important and time sensitive. Then, in the left corner, there is a button that when clicked, the user can see all the future time slots of the detection and can change the time slots, and on the right, there is a button that links to the general settings up page that includes setting the weight range of detection.**
 
