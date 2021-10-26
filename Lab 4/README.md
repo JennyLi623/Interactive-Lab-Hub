@@ -282,6 +282,18 @@ We encourage you to try using these controls, **while** paying particular attent
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
+
+![smart door mat concept](https://user-images.githubusercontent.com/89815599/138803923-77a3e718-bf92-4001-b00d-061dd76ab11c.jpg)
+
+**I decided to go with the original design but gave it a more detailed design. The device should be composed of two parts. One part is the door mat that tracks who steps on it. And the other part is a device that tracks if the door mat has been stepped on and sends alarm if necessary. People are allowed to set when should the system be checking the older people going out and they can also choose to block a certain time of detection. For example, if the device is originally set to detect people'sactivity from 22:00 to 7:00, and there is a group of guest coming, the host can choose to block the time that the system starts detection(like 23:30) or they can choose to not use the device for the day and restart tomorrow. I also hope that the device can set a weight range for detection and if the weight is very different, then the device may choose not to send the alarm but only record the time that the person steps on it. **
+
+
+
 * "Works like": shows what the device can do
+
+![smart door mat concept](https://user-images.githubusercontent.com/89815599/138805310-9d5df574-293b-45ae-a923-c87b8d4f3d00.jpg)
+
+**The mat should be connected to an app and can be controlld remotely. On the main page of the app, there should be a button that enables the device and turn of the alarm because those two are important and time sensitive. Then, in the left corner, there is a button that when clicked, the user can see all the future time slots of the detection and can change the time slots, and on the right, there is a button that links to the general settings up page that includes setting the weight range of detection.**
+
 * "Acts like": shows how a person would interact with the device
 
