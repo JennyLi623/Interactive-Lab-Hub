@@ -297,3 +297,5 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 * "Acts like": shows how a person would interact with the device
 
+https://user-images.githubusercontent.com/89815599/138807384-f496dda6-eb52-417f-974c-8ad013e63e56.mp4
+
