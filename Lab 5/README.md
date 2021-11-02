@@ -151,6 +151,10 @@ Try the two main features of this script: 1) pinching for percentage control, an
 
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
 
+![hand_position](https://user-images.githubusercontent.com/89815599/139781666-6efa2ac7-59b2-4861-a0bc-0952dc3e2568.png)
+
+***I want to use this for guesture detection. When I learn dancing, it is hard for me to noticing which motion am I doing correct and wrong. In that case, I really hope that a machine can help me point it out. Therefore, I think that this is very good for the dancers. It may not be very accurate because everyone has different body shape, yet it may help track whether one is off beat or forget a specific movement.***
+
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
 
@@ -187,6 +191,9 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
+![teachmachine](https://user-images.githubusercontent.com/89815599/139781923-2e6d66ec-efec-42f8-b755-4a0362f71cfb.png)
+***I think this one is different in that you can customize it. One thing that you can do is to create a classifier that includes specific event and specific objects. I think that helps the user a lot. For example, I can use this to detect as mentioned above whether alzheimer's disease patients do something that they are not supposed to do by including both of them in the classifcation model.***
+
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
@@ -214,21 +221,31 @@ Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+***I want to detect whether an alzheimer's disease patient who lives alone leaves home in the wrong time and get the relatives know announced as soon as possible if there is a detection. Therefore, I want to put the camera somewhere that can record the activiy at the door and have it record the people and activities.***
+
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
 For example:
-1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+1. When does it do what it is supposed to do?
+***I first tried to use face detection, but it does not do a good job in that the camera cannot get the face for most of the times since the person faces the door which is at the opposite position of the camera. Then I changed to object detection to detect whether there are human going in or out the door, and that seems to work.***
+2. When does it fail?
+***There are many situations that it fails. One is that it currently do not know which person is it and therefore may report everytime it see a person, and it also does not know whether the person is coming in or going out. In this case, it is hard to detect whether to send a notification or not. ***
+3. When it fails, why does it fail?
+***It fails because the detection algorithms are not good enough to handle all possible situations. And it gets into trouble when there is a more complicated situation happening.***
+4. Based on the behavior you have seen, what other scenarios could cause problems?
+***If there are too many people that block the camera, it may also cause problem. There were cases that when people visit the house, the alzheimer patient went out when no one noticed her. Besides, it is also hard when the camera is put somewhere that the patient can reach. This is true because the patient may think that the device is something new and therefore try to remove it or hide it.***
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+***The patients themselves are not aware of the uncertainties. However, the care takers should understand that part. And they should know that the system can only decrease the possibility of the patients going out but not completely stop it from happening.***
+2. How bad would they be impacted by a miss classification?
+***The patient might go out of the house and get lost. Also, when there is a false alarm, the care takers may feel anxious or they may ***
+3. How could change your interactive system to address this?
+***I think I need to do some research on how to train my own classifier and how to use better algorithms to help with this.***
+4. Are there optimizations you can try to do on your sense-making algorithm.
+***I think a combination of the height detector and the camera may help recognize who the person at the door actually is. flow-detector may help with detect whether the person is comin in or going out but I am not quite sure.***
 
 ### Part D
 ### Characterize your own Observant system
