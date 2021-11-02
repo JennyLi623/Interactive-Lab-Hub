@@ -253,12 +253,19 @@ For example:
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
 * What can you use X for?
+    detect alzheimer's disease patient's leaving home.
 * What is a good environment for X?
+    older people who live along.
 * What is a bad environment for X?
+    Household where many people live together or the older person needs t frequently go out.
 * When will X break?
+    Possibly when the older person looks very different or when it is block by something else.
 * When it breaks how will X break?
+    It may not correctly detect the person.
 * What are other properties/behaviors of X?
+    It may send alarm to notify care takers.
 * How does X feel?
+    It is designed not to affect the patient as much as possible.
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 
