@@ -100,13 +100,21 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 ![contours](https://user-images.githubusercontent.com/89815599/139770655-aa5c1fb4-90f5-4dde-9d60-0526be9512ba.png)
+
 I think this can be used to help with dance training because it catches the shapes of people's body and therefore it can be used to judge whether the posture is correct.
+
 ![face-detection](https://user-images.githubusercontent.com/89815599/139770671-a0df58de-4053-427f-9719-eabab16ad793.png)
+
 I have always have an interest in caring for alzheimer's disease patients. This one can be used inside the door to track if the patient wants to go out and whether the person is accompanied by others.
+
 ![flow-detection](https://user-images.githubusercontent.com/89815599/139770680-044ce270-ca21-4a52-9bef-531f8f7fe803.png)
+
 This one can be used not only in hospital settings but also probably in helping with traffic in general. It may be used to calculate the traffic flow and help people desin better roads.
+
 ![objectdetection](https://user-images.githubusercontent.com/89815599/139770689-758634be-0294-40f1-aa90-6aa8ca330fb3.png)
+
 Object detection can be used by alzheimer's disease patient in detecting whether they used something that they are not supposed to use. For example, they are not supposed to use a rice cooker to cook rice because they have already done it. If the system detects both the person and the rice cooker and their position are very close. The system may send an alarm to the family members and they may call the patient to distract her.
+
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
