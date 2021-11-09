@@ -6,7 +6,52 @@ from PIL import Image, ImageOps
 import numpy as np
 import cv2
 import sys
+from time import strftime, sleep
+import os
+import digitalio
+import board
+import adafruit_rgb_display.st7789 as st7789
+from PIL import Image, ImageDraw, ImageFont
 
+cs_pin = digitalio.DigitalInOut(board.CE0)
+dc_pin = digitalio.DigitalInOut(board.D25)
+reset_pin = None
+
+BAUDRATE = 64000000
+
+spi = board.SPI()
+
+disp = st7789.ST7789(
+    spi,
+    cs = cs_pin,
+    dc = dc_pin,
+    rst = reset_pin,
+    baudrate = BAUDRATE,
+    width=135,
+    height = 240,
+    x_offset = 53,
+    y_offset = 40,
+)
+
+height = disp.width
+width = disp.height
+
+image = Image.new("RGB", (width, height))
+rotation = 90
+
+draw = ImageDraw.Draw(image)
+
+draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+disp.image(image, rotation)
+
+padding = -2
+top = padding
+bottom = height - padding
+
+x = 0
+y = top + 20
+
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
@@ -42,8 +87,13 @@ for line in f.readlines():
         continue
     labels.append(line.split(' ')[1].strip())
 
+repeats = 0
+detected = 0
+dt = ""
 
 while(True):
+    y = top + 20
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
     if webCam:
         ret, img = cap.read()
 
@@ -63,6 +113,30 @@ while(True):
     # run the inference
     prediction = model.predict(data)
     print("I think its a:",labels[np.argmax(prediction)])
+
+    if (1 == np.argmax(prediction)):
+        detected = 1
+        draw.text((x + 20, y), "LEAVING DETECTED", font=font, fill="#FF0000")
+        repeats += 1
+        if repeats < 4: 
+            os.system('flite -voice st -t "Please go back to sleep. It is still late at night."')
+            sleep(1)
+        #print(strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
+        else:
+            y += 20
+            dt = strftime("%m/%d %H:%M:%S")
+            draw.text((x + 20, y), "last detected: ", font=font, fill="#FFFF00")
+            y += 20
+            draw.text((x + 20, y), dt, font=font, fill="#FFFF00")
+    else:
+        repeats = 0
+        draw.text((x + 20, y), "No Activity Detected", font=font, fill="#00FF00")
+        if detected == 1:
+            y += 20
+            draw.text((x + 20, y), "last detected: ", font=font, fill="#FFFF00")
+            y += 20
+            draw.text((x + 20, y), dt, font=font, fill="#FFFF00") 
+    disp.image(image, rotation)
 
     if webCam:
         if sys.argv[-1] == "noWindow":
