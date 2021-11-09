@@ -275,4 +275,4 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
-![The Video Is Here](https://drive.google.com/file/d/1DBZ0hyrroIY02U9tPXzdWziMBlkhpEih/view?usp=sharing)
+[The Video Is Here](https://drive.google.com/file/d/1DBZ0hyrroIY02U9tPXzdWziMBlkhpEih/view?usp=sharing)
