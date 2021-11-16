@@ -171,7 +171,8 @@ The thief should not know that the system exists because in that case they may f
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
-[This is the link to the protocol that we built](https://www.youtube.com/watch?v=U9FzgsF2T-s)
+[This is the link to the protocol that we built](https://youtu.be/EIV3qaMsQhI)
 
+**My Partner in this lab is Qianzhi Xu** 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
