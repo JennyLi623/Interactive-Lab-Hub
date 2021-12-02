@@ -85,6 +85,11 @@ Once connected, you should be able to see all the messages under the IDD topic. 
   ```
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
+1. A system that prevents thief from stealing stuff.
+2. An interactive game that helps people to know more about each other. One can give questions and the other can answer and then when the answer matches with truth, the player gets one point.
+3. A system that automatically keeps track of people at the door and let the host know so that the host can choose either to open the door or not.
+4. An audio diary system that allows people to keep audio transcripted diary.
+5. A software that helps announce caregivers the abnormal behaviors of people that need help such as when the older people stay in kitchen when they are not suppose to make meals.
 
 ### Part C
 ### Streaming a Sensor
@@ -108,6 +113,10 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+
+![3439df7fe870adc69d8d3b098982f13](https://user-images.githubusercontent.com/89815599/141887880-0aeeaec4-1234-4719-9af2-071d0ee1764c.jpg)
+
+![e58364fbccb58b76ace8c66a8445066](https://user-images.githubusercontent.com/89815599/141887937-52cef07c-3e7f-4c35-bde3-18d15cc278b3.png)
 
 
 ### Part D
@@ -149,11 +158,21 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+We made a remote detector that can help people manage their property. This device has a broad usage. For example, you can use it in museum, the company, and also in your own property.
+
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+
+![ef319ae17d172979c2ad78973fe4556](https://user-images.githubusercontent.com/89815599/141923751-efd49f96-d620-43a3-9276-9e529db88ae8.jpg)
+
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
+The thief should not know that the system exists because in that case they may feel that they have successfully escaped. At the same time, the police or detectives can spend the time to track where the thief went. For the user of the system, we built a voice assistant because in that case, he/she won't miss the alarm even if they are far away from their phone. It is like how they can get a phone call immediately after their properties are stolen.
+
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
+[This is the link to the protocol that we built](https://youtu.be/EIV3qaMsQhI)
+
+**My Partner in this lab is Qianzhi Xu** 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
