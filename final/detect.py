@@ -45,15 +45,25 @@ y = top + 20
 
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+
 topic = 'IDD/#'
+
+received = False
 
 def on_connect(client, userdata, flags, rc):
     print(f"connected with reult code {rc}")
     client.subscribe(topic)
+    received = False
 
 def on_message(client, userdata, msg):
     #print(f"topic: {msg, topic} msg: {msg.payload.decode('UTF-8')}")
-    if msg.topic == 'IDD/detect':
+    global received
+    if msg.topic == 'IDD/detect' and received == False:
         draw.rectangle((0, 0, width, height), outline=0, fill="#FF0000")
         draw.rectangle((10,10, width-20, height-20), outline=0, fill=0)
         draw.text((x + 20, y + 30), "    ALERT", font=font, fill="#FF0000")
@@ -63,7 +73,16 @@ def on_message(client, userdata, msg):
         os.system('flite -voice st -t "Alert! The person may have fallen!"')
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         disp.image(image, rotation)
-    
+
+    print(buttonB.value, buttonA.value)
+    if buttonB.value and not buttonA.value:
+        print("button clicked")
+        received = True
+        draw.rectangle((0, 0, width, height), outline=0, fill="#000000")
+        draw.text((x + 20, y + 30), "ALARM RECEIVED", font = font, fill="#00FF00")
+        disp.image(image, rotation)
+        os.system('flite -voice st -t "Alarm received"')
+
 client = mqtt.Client(str(uuid.uuid1()))
 
 client.tls_set()
