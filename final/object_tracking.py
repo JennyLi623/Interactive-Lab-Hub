@@ -4,6 +4,10 @@ import uuid
 import paho.mqtt.client as mqtt
 import time
 import os
+import qwiic
+import time
+import requests
+
 #Every client needs a random ID
 client = mqtt.Client(str(uuid.uuid1()))
 
@@ -19,6 +23,10 @@ topic = "IDD/detect"
 topic2 = 'IDD/response'
 reset = 1
 initial_delay = True
+
+ToF = qwiic.QwiicVL53L1X()
+if (ToF.sensor_init() == None):
+    print("Sensor online!\n")
 
 # see how long we keep track of the a person.
 # the longer the time_frame, the longer we get alert after people fall
@@ -40,10 +48,18 @@ classFile = 'coco.names'
 
 file1 = open(classFile, 'r')
 # count = 0
- 
+
 
 while True:
- 
+    try:
+        ToF.start_ranging()
+        distance = ToF.get_distance()
+        ToF.stop_ranging()
+        r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 100))
+        print(r.json())
+    except Exception as e:
+        print(e)
+
     # Get next line from file
     line = file1.readline()
  
