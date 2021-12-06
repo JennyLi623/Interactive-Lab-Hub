@@ -3,6 +3,7 @@ from collections import deque
 import uuid
 import paho.mqtt.client as mqtt
 import time
+import os
 #Every client needs a random ID
 client = mqtt.Client(str(uuid.uuid1()))
 
@@ -15,14 +16,15 @@ client.connect(
     port = 8883)
 
 topic = "IDD/detect"  
+topic2 = 'IDD/response'
 reset = 1
 initial_delay = True
 
 # see how long we keep track of the a person.
 # the longer the time_frame, the longer we get alert after people fall
-time_frame = 500
-alert_threshold = 8*time_frame
-same_people_threshold = 400
+time_frame = 20
+alert_threshold = 500
+same_people_threshold = 100
 thres = 0.45 # Threshold to detect object
 
 cap = cv2.VideoCapture(0)
@@ -39,6 +41,7 @@ classFile = 'coco.names'
 file1 = open(classFile, 'r')
 # count = 0
  
+
 while True:
  
     # Get next line from file
@@ -52,9 +55,6 @@ while True:
     classNames.append(line.strip())
  
 file1.close()
-
-for name in classNames:
-    print(name)
 
 configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
 weightsPath = 'frozen_inference_graph.pb'
@@ -77,19 +77,76 @@ def same_people(a, b):
 def alert(people):
     for p in people:
         diff = [0,0,0,0]
+        # print('printing', p[-1])
+        if p[-1][0] == -1:
+            continue
         for i in range(len(p)-1):
             diff += abs(p[i]-p[i+1])
-            print(diff)
-        print('difference', diff)
-        if sum(diff) > alert_threshold:
+            # print(diff)
+        # print('difference', diff)
+        # print(sum(diff))
+        # print(len(p))
+        if sum(diff) < alert_threshold and len(p)>= time_frame:
             client.publish(topic, "Alert!")
+            p.append((-1,-1,-1,-1))
             print('ALERT')
+
+
+
+
+
+import paho.mqtt.client as mqtt
+import uuid
+
+# # the # wildcard means we subscribe to all subtopics of IDD
+# topic = 'IDD/#'
+
+
+#this is the callback that gets called once we connect to the broker. 
+#we should add our subscribe functions here as well
+def on_connect(client, userdata, flags, rc):
+	print(f"connected with result code {rc}")
+	client.subscribe(topic2)
+	# you can subsribe to as many topics as you'd like
+	# client.subscribe('some/other/topic')
+
+
+# this is the callback that gets called each time a message is recived
+def on_message(cleint, userdata, msg):
+    message = msg.payload.decode('UTF-8')
+    if message == 'police':
+        os.system('espeak -ven+f2 -k5 -s150 --stdout  "we are calling the police" | aplay')
+    if message == 'back':
+        os.system('espeak -ven+f2 -k5 -s150 --stdout  "The care giver is on the way" | aplay')
+    # print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
+    # if msg.topic == 'IDD/response':
+    #     print('in the if statement')
+    #     print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
+
+
+# Every client needs a random ID
+client = mqtt.Client(str(uuid.uuid1()))
+# configure network encryption etc
+client.tls_set()
+# this is the username and pw we have setup for the class
+client.username_pw_set('idd', 'device@theFarm')
+
+# attach out callbacks to the client
+# client.on_connect = on_connect
+# client.on_message = on_message
+
+#connect to the broker
+client.connect(
+    'farlab.infosci.cornell.edu',
+    port=8883)
+# client.loop_forever()
+
 while True:
-    print('Number of poeple', len(people))
+    # print('Number of poeple', len(people))
     success,img = cap.read()
     
     classIds, confs, bbox = net.detect(img,confThreshold=thres)
-    print(classIds,bbox)
+    # print(classIds,bbox)
     
     if len(classIds) != 0:
         for classId, confidence,box in zip(classIds.flatten(),confs.flatten(),bbox):
@@ -101,15 +158,17 @@ while True:
                 last_pos = p[-1]
                 if same_people(last_pos, box):
                     add = True
+                    if p[-1][0] == -1:
+                        p = []
                     p.append(box)
                     if len(p) > time_frame:
                         p.popleft()
-                    print('same people')
+                    # print('same people')
             if not add:
                 p = deque()
                 p.append(box)
                 people.append(p)
-            print(box)
+            # print(box)
             cv2.rectangle(img,box,color=(0,255,0),thickness=2)
             cv2.putText(img,classNames[classId-1].upper(),(box[0]+10,box[1]+30),
             cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
@@ -118,7 +177,13 @@ while True:
         alert(people)
     cv2.imshow('Output',img)
     cv2.waitKey(1)
-    time.sleep(0.5)
+
+    client.on_connect = on_connect
+    client.on_message = on_message  
+    client.loop()
+    # os.system('espeak -ven+f2 -k5 -s150 --stdout  "we are calling the police" | aplay')
+    # os.system('espeak -ven+f2 -k5 -s150 --stdout  "The care giver is on the way" | aplay')
+    # time.sleep(0.5)
 
 
 # import cv2
