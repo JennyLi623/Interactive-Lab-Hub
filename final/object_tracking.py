@@ -51,14 +51,6 @@ file1 = open(classFile, 'r')
 
 
 while True:
-    try:
-        ToF.start_ranging()
-        distance = ToF.get_distance()
-        ToF.stop_ranging()
-        r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 100))
-        print(r.json())
-    except Exception as e:
-        print(e)
 
     # Get next line from file
     line = file1.readline()
@@ -158,6 +150,15 @@ client.connect(
 # client.loop_forever()
 
 while True:
+    try:
+        ToF.start_ranging()
+        distance = ToF.get_distance()
+        ToF.stop_ranging()
+        r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 100))
+        print(r.json())
+    except Exception as e:
+        print(e)
+
     # print('Number of poeple', len(people))
     success,img = cap.read()
     
