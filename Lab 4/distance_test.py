@@ -6,6 +6,7 @@
 
 import qwiic
 import time
+import requests
 
 print("VL53L1X Qwiic Test\n")
 ToF = qwiic.QwiicVL53L1X()
@@ -22,7 +23,8 @@ while True:
 
 		distanceInches = distance / 25.4
 		distanceFeet = distanceInches / 12.0
-
+		r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 100))
+		print(r.json())
 		print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
 
 	except Exception as e:
