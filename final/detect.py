@@ -56,7 +56,7 @@ topic = 'IDD/#'
 received = False
 
 def on_connect(client, userdata, flags, rc):
-    print(f"connected with reult code {rc}")
+    #print(f"connected with reult code {rc}")
     client.subscribe(topic)
     received = False
 
@@ -74,12 +74,21 @@ def on_message(client, userdata, msg):
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         disp.image(image, rotation)
 
-    print(buttonB.value, buttonA.value)
     if buttonB.value and not buttonA.value:
-        print("button clicked")
+        #print("button clicked")
         received = True
+        client.publish("IDD/response", "back")
         draw.rectangle((0, 0, width, height), outline=0, fill="#000000")
-        draw.text((x + 20, y + 30), "ALARM RECEIVED", font = font, fill="#00FF00")
+        draw.text((x + 20, y + 30), "BE RIGHT BACK", font = font, fill="#00FF00")
+        disp.image(image, rotation)
+        os.system('flite -voice st -t "Alarm received"')
+
+    if buttonA.value and not buttonB.value:
+        #print("button clicked")
+        received = True
+        client.publish("IDD/response", "police")
+        draw.rectangle((0, 0, width, height), outline=0, fill="#000000")
+        draw.text((x + 20, y + 30), "CALL FOR HELP", font = font, fill="#FFFF00")
         disp.image(image, rotation)
         os.system('flite -voice st -t "Alarm received"')
 

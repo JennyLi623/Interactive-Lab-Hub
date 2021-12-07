@@ -154,7 +154,7 @@ while True:
         ToF.start_ranging()
         distance = ToF.get_distance()
         ToF.stop_ranging()
-        r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 100))
+        r = requests.get(url="https://lighting-backend.herokuapp.com/dtoc/" + "{:.2f}".format(distance / 1000))
         print(r.json())
     except Exception as e:
         print(e)
