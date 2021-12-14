@@ -101,10 +101,11 @@ https://user-images.githubusercontent.com/89815599/144531681-71100bee-b643-4138-
 
 2. Version 2 - Demo Setup
 
-![Link to the Setup Video](https://youtu.be/zrw_UAdV-2E)
+[Link to the Setup Video](https://youtu.be/zrw_UAdV-2E)
 
 3. Version 3 - Demo Video
-! [Demo Video](https://www.youtube.com/watch?v=GfJMESiYbQo)
+
+[Demo Video](https://www.youtube.com/watch?v=GfJMESiYbQo)
 
 #### VIII. Appendix
 
