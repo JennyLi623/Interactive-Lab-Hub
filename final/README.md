@@ -100,7 +100,7 @@ In the future, we would like to build a smart home system with more functions an
 https://user-images.githubusercontent.com/89815599/144531681-71100bee-b643-4138-9204-172b9a64300c.mp4
 
 2. Version 2 - Demo Setup
- -[Link to the Setup Video](https://youtu.be/zrw_UAdV-2E)
+ -![image](https://user-images.githubusercontent.com/89815599/145935262-dd96ecbc-ea6e-4d0b-8a29-57c86b56b167.png)(https://youtu.be/zrw_UAdV-2E)
 
 3. Version 3 - Demo Video
  -[Demo Video](https://www.youtube.com/watch?v=GfJMESiYbQo)
