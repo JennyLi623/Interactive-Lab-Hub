@@ -99,6 +99,13 @@ In the future, we would like to build a smart home system with more functions an
 
 https://user-images.githubusercontent.com/89815599/144531681-71100bee-b643-4138-9204-172b9a64300c.mp4
 
+2. Version 2 - Demo Setup
+
+![Link to the Setup Video](https://youtu.be/zrw_UAdV-2E)
+
+3. Version 3 - Demo Video
+! [Demo Video](https://www.youtube.com/watch?v=GfJMESiYbQo)
+
 #### VIII. Appendix
 
 1. Github link to light-frontend: https://github.com/JennyLi623/sl-frontend
